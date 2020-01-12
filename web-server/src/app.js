@@ -17,17 +17,19 @@ hbs.registerPartials(partialsPath)
 //app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res)=>{
+    console.log("req.query")
     res.render('index',{title: "weather app"})
 })
 app.get('/about', (req, res)=>{
-    res.render('about',{title: "weather app"})
+    console.log(req.query)
+    res.render('about',{title: "weather app"}) 
 })
 
 // app.com 
 //app.om/help
 //app.com/about
 
-app.get('',(req, res)=>{
+app.get('/hey',(req, res)=>{
     res.send("k")
 })
 
