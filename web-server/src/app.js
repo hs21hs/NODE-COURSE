@@ -56,6 +56,6 @@ app.get('/hey',(req, res)=>{
     res.send("k")
 })
 
-app.listen(3000, ()=>{
-    console.log('listening')
+app.listen(port, ()=>{
+    console.log('server up on'+port)
 })
