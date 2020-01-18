@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const validator = require('validator')
 
 mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
     useNewUrlParser: true,
@@ -6,40 +7,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
     useUnifiedTopology: true
 })
 
-const Task = mongoose.model('Task', {
-    description: {
-        type: String
-    },
-    completed: {
-        type: Boolean
-    }
-})
 
-const first = new Task ({
-    description: 'first task',
-    completed: false
-})
-first.save().then(() => {
-console.log(first)
-}).catch((error) => {
-    console.log('Error!', error)
-})
 
-// const User = mongoose.model('User', {
-//     name: {
-//         type: String
-//     },
-//     age: {
-//         type: Number
-//     }
-// })
+// // npm validator gives u trim stuff etc
 
-// const me = new User ({
-//     name: 'Andrew',
-//     age: 27
-// })
-// me.save().then(() => {
-// console.log(me)
-// }).catch((error) => {
-//     console.log('Error!', error)
-// })
