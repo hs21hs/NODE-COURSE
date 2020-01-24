@@ -2,7 +2,7 @@ const mongodb = require('mongodb')
 // const MongoClient = mongodb.MongoClient
 const {MongoClient, ObjectID} = mongodb
 
-const connectionURL = 'mongodb://127.0.0.1:27017'
+const connectionURL = process.env.MONGODB_URL
 const databaseName = 'task-manager'
 
 MongoClient.connect(connectionURL,{useUnifiedTopology: true}, (error, client) => {

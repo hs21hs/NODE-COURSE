@@ -5,7 +5,7 @@ const taskRouter = require('./routers/task')
 const User = require('./models/user')
 const Task = require('./models/task')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 
 // app.use((req, res, next) => {
@@ -47,15 +47,22 @@ app.post('/tasks', (req,res) => {
 //     console.log(isMatch)
 // }
 
-const jwt = require('jsonwebtoken')
+// const jwt = require('jsonwebtoken')
 
-const myFunction = async () => {
-    const token = jwt.sign({ _id: 'abc123' }, 'thisismynewcourse')
-    console.log(token)
+// const myFunction = async () => {
+//     const token = jwt.sign({ _id: 'abc123' }, 'thisismynewcourse')
+//     console.log(token)
 
-    const data = jwt.verify(token, 'thisismynewcourse')
-    console.log(data)
-}
+//     const data = jwt.verify(token, 'thisismynewcourse')
+//     console.log(data)
+// }
 
+// const multer = require('multer')
+// const upload = multer({
+//     dest: 'images'
+// })
+// app.post('/upload', upload.single('upload'),(req,res) => {
+//     res.send
+// })
 
-myFunction()
+// myFunction()
